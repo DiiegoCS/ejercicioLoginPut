@@ -58,9 +58,7 @@ class RegistroUsuario : AppCompatActivity() {
                         Toast.makeText(applicationContext, "Ups! No se pudo crear el usuario!", Toast.LENGTH_SHORT).show()
                         binding.progressBar2.visibility = View.GONE
                     }
-
                 }
-
             }
         }
     }
@@ -100,6 +98,7 @@ class RegistroUsuario : AppCompatActivity() {
             RestEngine.getRestEngine().create(UsuarioAPIService::class.java)
         val resultado: Call<Usuario> = llamada.obtenerUsuario("bd.json")
         val u:Usuario? = resultado.execute().body()
+
         var aux:Int= 0
         for (i in u!!){
             if (i.usuario == usuario ){

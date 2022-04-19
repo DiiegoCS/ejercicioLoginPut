@@ -31,7 +31,6 @@ class LoginUsuario : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener {
-
             binding.progressBar.visibility = View.VISIBLE
 
             CoroutineScope(Dispatchers.IO).launch {
@@ -51,11 +50,8 @@ class LoginUsuario : AppCompatActivity() {
                     intent.putExtra("usuario", usu)
                     startActivity(intent)
                 }
-
             }
-
         }
-
     }
 
     fun validarUsuarioLogin(usuario: String, pass: String): Int {
