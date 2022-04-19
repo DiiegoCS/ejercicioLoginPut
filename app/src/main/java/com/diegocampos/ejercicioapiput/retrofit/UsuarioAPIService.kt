@@ -12,6 +12,6 @@ interface UsuarioAPIService {
     fun obtenerUsuario(@Path("json") json: String): Call<Usuario>
 
     @PUT("bd/{item}.json")
-    fun agregarUsuario(@Path("item") item: Int, @Body usuario: Usuario): Call<UsuarioInfo>
+    fun agregarUsuario(@Path("item") item: Int, @Body usuarioInfo: UsuarioInfo): Call<UsuarioInfo>
 
 }

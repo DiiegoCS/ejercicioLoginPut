@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EjercicioAPIPUT">
         <activity
+            android:name=".OtraAct"
+            android:exported="false" />
+        <activity
             android:name=".RegistroUsuario"
             android:exported="false" />
         <activity

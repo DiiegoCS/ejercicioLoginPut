@@ -14,7 +14,7 @@ class RestEngine {
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
             val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://usuarios-dd300-default-rtdb.firebaseio.com//")
+                .baseUrl("https://usuarios-dd300-default-rtdb.firebaseio.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
